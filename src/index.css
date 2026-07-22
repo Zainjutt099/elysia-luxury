@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", "Helvetica Neue", Arial, sans-serif;
+  
+  --color-art-bg: #F5F2ED;
+  --color-art-ink: #1A1A1A;
+  --color-art-accent: #D44D26;
+  --color-art-card: #EAE7E1;
+  --color-art-muted: rgba(26, 26, 26, 0.6);
+  --color-art-border: rgba(26, 26, 26, 0.1);
+  --color-art-border-hover: rgba(26, 26, 26, 0.25);
+}
+
+body {
+  margin: 0;
+  background-color: #F5F2ED;
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+}
+
+/* Custom Artistic Flair components */
+.art-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #1A1A1A;
+  border-radius: 100px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.art-btn-primary {
+  background: #1A1A1A;
+  color: #F5F2ED;
+  border: none;
+  padding: 12px 24px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.art-btn-primary:hover {
+  background: #D44D26;
+  color: #F5F2ED;
+}
+
+.art-btn-secondary {
+  background: transparent;
+  color: #1A1A1A;
+  border: 1px solid #1A1A1A;
+  padding: 12px 24px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.art-btn-secondary:hover {
+  background: #1A1A1A;
+  color: #F5F2ED;
+}
+
+/* Custom scrollbars and utility classes */
+
+/* Luxury custom background glint animation */
+.gold-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(212, 175, 55, 0.25),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.5s;
+  animation: shimmer 4s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Seamless no-scrollbar class as utilized in carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* High contrast glass layers */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

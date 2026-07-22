@@ -1,0 +1,6 @@
+{
+  "name": "Elysia Luxury Store",
+  "description": "An ultra-premium, high-end editorial luxury fashion and lifestyle e-commerce store featuring curated categories, limited drops, and beautiful glassmorphic visual animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
